@@ -1,0 +1,32 @@
+{
+  "name": "task-management-service",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "bun": ">=1.1.0"
+  },
+  "scripts": {
+    "dev": "bun --watch src/infrastructure/http/server.ts",
+    "start": "bun src/infrastructure/http/server.ts",
+    "worker": "bun src/infrastructure/queue/worker.ts",
+    "test": "bun tests/test.spec.ts",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@types/pg": "^8.15.6",
+    "dotenv": "^16.6.1",
+    "drizzle-orm": "^0.44.7",
+    "elysia": "^1.4.15",
+    "ioredis": "^5.8.2",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "eslint": "^9.39.1",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.46.3"
+  }
+}
